@@ -17,7 +17,7 @@ export class Finder extends Component {
     }
 
     loadGithubRepos = () => {
-        fetch('https://api.github.com/users/surajboniwal/repos').then(response => response.json()).then(data => {
+        fetch('https://api.github.com/users/surajboniwal/repos?user=bb57138c66c9a880f9d0&pass=3c4a5206dc66ed3ae7302a3ab37e1242f3fcea18').then(response => response.json()).then(data => {
             this.setState({ projects: data })
         })
     }
@@ -43,14 +43,18 @@ export class Finder extends Component {
                 <div className="bg-white h-full w-full">
                     {
                         this.state.projects === null ?
-                            <div className="flex items-center justify-center">
+                            <div className="h-full flex items-center justify-center">
                                 Loading...
                             </div> :
-                            <div className='grid grid-cols-3 h-full overflow-scroll'>
+                            <div className='grid grid-cols-3 overflow-x-hidden h-full w-full overflow-scroll'>
                                 {
-                                    this.state.projects.map(project => {
-                                        return <Folder project={project} />
-                                    })
+                                    this.state.projects.length === undefined || this.state.projects.length === null ?
+                                        <div>
+                                            Please try again after some time
+                                        </div> :
+                                        this.state.projects.map(project => {
+                                            return <Folder project={project} />
+                                        })
                                 }
                             </div>
                     }
