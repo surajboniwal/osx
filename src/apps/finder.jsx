@@ -46,7 +46,7 @@ export class Finder extends Component {
                             <div className="h-full flex items-center justify-center">
                                 Loading...
                             </div> :
-                            <div className='grid grid-cols-3 overflow-x-hidden h-full w-full overflow-scroll'>
+                            <div className='grid grid-cols-5 overflow-x-hidden h-full w-full overflow-scroll'>
                                 {
                                     this.state.projects.length === undefined || this.state.projects.length === null ?
                                         <div>
