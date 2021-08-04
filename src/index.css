@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*{
+  font-family: 'Nunito', sans-serif;
+}
+
+.dock-parent{
+  pointer-events: none;
+  height: 4rem;
+  transition-duration: 200ms;
+}
+
+.dock-child{
+  pointer-events: auto;
+}
+
+.dock-parent:hover{
+  height: 5.5rem;
+}
+
+.dock-child:hover{
+  transform: scale(1.5);
+}
+
+.dock-child:hover + .dock-child{
+  /* transform: scale(1.2); */
+}
