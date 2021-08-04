@@ -3,6 +3,10 @@ import { FaApple } from 'react-icons/fa'
 import { MdAirplay, MdWifi, MdVolumeDown, MdSearch, MdSettings } from 'react-icons/md'
 
 const TopBar = () => {
+    const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
+    const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
+    const date = new Date()
+
     return (
         <div className='w-full h-6 z-10 fixed bg-white bg-opacity-30 flex justify-between text-white px-3'>
             <div className="flex items-center">
@@ -39,7 +43,9 @@ const TopBar = () => {
                     <MdSettings />
                 </div>
                 <div className="text-sm font-semibold">
-                    Mon Jun 21 9:42 AM
+                    {
+                        `${days[date.getDay()]}, ${months[date.getMonth()]} ${date.getDate()}`
+                    }
                 </div>
             </div>
         </div>
