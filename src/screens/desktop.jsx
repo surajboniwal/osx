@@ -15,7 +15,7 @@ export class Desktop extends Component {
 
     launchApp = (app) => {
         let _launched_apps = this.state.launched_apps
-        if (_launched_apps.includes(app)) return
+        if (_launched_apps.find(a => a.id === app)) return
         _launched_apps.push(apps.find(a => a.id === app))
         this.setState({ launched_apps: _launched_apps })
     }
