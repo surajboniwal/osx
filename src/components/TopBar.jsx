@@ -2,7 +2,7 @@ import React from 'react'
 import { FaApple } from 'react-icons/fa'
 import { MdAirplay, MdWifi, MdVolumeDown, MdSearch, MdSettings } from 'react-icons/md'
 
-const TopBar = () => {
+const TopBar = ({ launchApp }) => {
     const days = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']
     const date = new Date()
@@ -14,7 +14,7 @@ const TopBar = () => {
                     <FaApple />
                 </div>
 
-                <div className="text-base font-bold mr-4 cursor-pointer">Finder</div>
+                <div onClick={() => launchApp('finder')} className="text-base font-bold mr-4 cursor-pointer">Finder</div>
 
                 <ul className="list-none flex font-bold">
                     <MenuItem label='File' />

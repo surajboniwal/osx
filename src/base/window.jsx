@@ -7,7 +7,7 @@ export class Window extends Component {
     constructor() {
         super()
         this.state = {
-            cursorHold: false
+            cursorHold: false,
         }
     }
 
@@ -29,13 +29,13 @@ export class Window extends Component {
                 onStop={this.setCursorHoldOff}
                 onStart={this.setCursorHoldOn}
                 allowAnyClick={false}
-                defaultPosition={{ x: 50, y: 50 }}
+                defaultPosition={{ x: 0, y: 0 }}
                 bounds='parent'
                 style={{ position: 'absolute' }}
             >
-                <div className='shadow-xl' style={{ width: '1000px', height: '550px', position: 'absolute', top: 0 }}>
+                <div className={`shadow-2xl ${this.props.focused ? 'z-10' : ''}`} style={{ width: '1000px', height: '550px', position: 'absolute', top: 0 }}>
 
-                    <div className={`title-bar flex items-center justify-between bg-gray-200 rounded-t p-1 ${this.state.cursorHold ? 'cursor-move' : ''}`}>
+                    <div onClick={() => this.props.setFocused(this.props.child.id)} className={`title-bar flex items-center justify-between bg-gray-200 rounded-t p-1 ${this.state.cursorHold ? 'cursor-move' : ''}`}>
                         <div className='flex'>
                             <div onClick={() => this.props.closeApp(this.props.child)} className="bg-red-500 text-white rounded-full p-1.5 mr-2 cursor-pointer"></div>
                             <div className="bg-yellow-500 text-white rounded-full p-1.5 mr-2 cursor-pointer"></div>

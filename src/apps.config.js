@@ -10,30 +10,35 @@ export const apps = [
         title: 'Safari',
         icon: './icons/safari.svg',
         display: displaySafari,
+        focus: false,
     },
     {
         id: 'terminal',
         title: 'Terminal',
         icon: './icons/terminal.svg',
         display: displayTerminal,
+        focus: false,
     },
     {
         id: 'finder',
         title: 'Finder',
         icon: './icons/folder.svg',
         display: displayFinder,
+        focus: true,
     },
     {
         id: 'code',
         title: 'VS Code',
         icon: './icons/code.svg',
         display: displayCode,
+        focus: false,
     },
     {
         id: 'spotify',
         title: 'Spotify',
         icon: './icons/spotify.svg',
         display: displaySpotify,
+        focus: false,
     }
 ];
 

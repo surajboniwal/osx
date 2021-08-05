@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import TopBar from './components/TopBar'
 import BootScreen from './screens/boot_screen'
 import Desktop from './screens/desktop';
 
@@ -23,9 +22,8 @@ export class App extends Component {
     render() {
         return (
             <div className='bg-macos-bg h-screen w-screen overflow-hidden'>
-                {this.state.booting ? < BootScreen /> : <></>}
-                <TopBar />
-                <Desktop />
+                {this.state.booting ? < BootScreen /> : <Desktop />}
+
             </div>
         )
     }
