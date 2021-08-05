@@ -20,13 +20,13 @@ export const apps = [
     {
         id: 'finder',
         title: 'Finder',
-        icon: './icons/finder.svg',
+        icon: './icons/folder.svg',
         display: displayFinder,
     },
     {
         id: 'code',
         title: 'VS Code',
-        icon: './icons/code.ico',
+        icon: './icons/code.svg',
         display: displayCode,
     },
     {
@@ -34,5 +34,21 @@ export const apps = [
         title: 'Spotify',
         icon: './icons/spotify.svg',
         display: displaySpotify,
+    }
+];
+
+
+export const socialApps = [
+    {
+        id: 'github',
+        title: 'Github',
+        icon: './icons/github.svg',
+        url: 'https://github.com/surajboniwal',
+    },
+    {
+        id: 'linkedin',
+        title: 'LinkedIn',
+        icon: './icons/linkedin.svg',
+        url: 'https://linkedin.com/in/surajboniwal',
     }
 ];

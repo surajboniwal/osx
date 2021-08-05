@@ -40,7 +40,7 @@ export class Desktop extends Component {
                     }
 
                     <div onDoubleClick={() => this.launchApp('finder')} onClick={() => this.setState({ projects_selected: true })} className={`m-6 p-2 flex flex-col items-center justify-center bg-opacity-30 rounded-lg ${this.state.projects_selected ? 'bg-blue-500' : ''}`}>
-                        <img className=' w-16 h-16' src="icons/folder.svg" alt="" />
+                        <img className=' w-16 h-16' src="icons/folder_no_bg.svg" alt="" />
                         <p className='text-white font-semibold'>Projects</p>
                     </div>
 
