@@ -15,12 +15,10 @@ const TerminalApp = () => {
                 commands={{
                     'github': () => openUrl('https://github.com/surajboniwal', 'Github'),
                     'linkedin': () => openUrl(' https://linkedin.com/in/surajboniwal', 'LinkedIn'),
-                    'hacking-guide': () => openUrl('https://shattereddisk.github.io/rickroll/rickroll.mp4', 'Hacking Forum'),
                 }}
                 descriptions={{
                     'github': 'Visit me on Github',
                     'linkedin': 'Visit me on LinkedIn',
-                    'hacking-guide': 'Best hacking guide on the internet'
                 }}
                 msg={`Hello! You can type 'help' for list of commands`}
             />

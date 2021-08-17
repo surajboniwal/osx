@@ -3,6 +3,7 @@ import { displayTerminal } from './apps/terminal'
 import { displayCode } from './apps/code'
 import { displaySpotify } from './apps/spotify'
 import { displayFinder } from './apps/finder';
+import { displayResume } from './apps/resume';
 
 export const apps = [
     {
@@ -39,7 +40,14 @@ export const apps = [
         icon: './icons/spotify.svg',
         display: displaySpotify,
         focus: false,
-    }
+    },
+    {
+        id: 'resume',
+        title: 'Suraj Boniwal',
+        icon: './icons/file_icon2.svg',
+        display: displayResume,
+        focus: true,
+    },
 ];
 
 
